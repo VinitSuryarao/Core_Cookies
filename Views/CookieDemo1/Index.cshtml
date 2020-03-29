@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@model CookiesDemo.ViewModels.ViewClientModel
+
+<h1>Index</h1>
+<form asp-controller="CookieDemo1" asp-action="OnSubmit">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <input id="txtFirstName" type="text" class="form-control" asp-for="@Model.ClientModel.FirstName" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <input id="txtLastName" type="text" class="form-control" asp-for="@Model.ClientModel.LastName" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <input id="btnSubmit" type="submit" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+</form>
